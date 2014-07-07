@@ -28,6 +28,7 @@ color adrian
 
 Bundle 'ku-quickfix'
 Bundle 'genutils'
+Bundle 'The-NERD-Commenter'
 
 " Bundle 'winmanager'
 " using winmanager to manage windows
@@ -117,10 +118,10 @@ set encoding=UTF-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 set nocompatible
-set nocp
 set ignorecase autoread number cursorline showmatch
 set laststatus=2
 set backspace=2
+
 set autoindent cindent smartindent
 set nobackup noswapfile
 set history=1000
@@ -128,15 +129,15 @@ set laststatus=2
 set cmdheight=2
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 " using mouse
-set mouse=a
+" set mouse=a
 " set selection=exclusive
 " set selectmode=mouse,key
 
 set hlsearch incsearch
 set colorcolumn=+1
 set textwidth=100
-set foldmethod=syntax
-set nofoldenable
+set foldenable
+set foldmethod=indent
 
 filetype off
 filetype plugin indent on
