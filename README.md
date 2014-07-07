@@ -9,7 +9,3 @@ git clone https://github.com/lshmouse/vim-config.git
 cd vim-config
 bash install.sh
 ```
-
-Unkown Issues
------------------------
-

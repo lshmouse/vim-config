@@ -8,7 +8,7 @@ mv ~/.vimrc ~/.vim-backup
 mv ~/.vim ~/.vim-backup
 
 echo "Install vim config!"
-cp .vimrc ~/.vimrc
+cp vimrc ~/.vimrc
 vim -c "q" ~/.vimrc
 
 echo "install finished, enjoy yourself!"
