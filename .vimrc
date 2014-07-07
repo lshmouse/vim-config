@@ -65,18 +65,19 @@ let g:LookupFile_PreservePatternHistory=1
 let g:LookupFile_AlwaysAcceptFirst=1
 let g:LookupFile_AllowNewFiles=0
 
-" Bundle 'bufexplorer.zip'
-" nmap  <F6> :BufExplorer<cr>
-Bundle 'minibufexpl.vim'
-nmap  <F6> :buffers<cr>
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1
-let g:bufExplorerMaxHeight=30
-let g:miniBufExplorerMoreThanOne=0
-nmap <leader>bn :bn<cr>
-nmap <leader>bp :bp<cr>
+Bundle 'bufexplorer.zip'
+nmap  <F6> :BufExplorer<cr>
+
+" Bundle 'minibufexpl.vim'
+" nmap  <F6> :buffers<cr>
+" let g:miniBufExplMapWindowNavVim = 1 
+" let g:miniBufExplMapWindowNavArrows = 1 
+" let g:miniBufExplMapCTabSwitchBufs = 1 
+" let g:miniBufExplModSelTarget = 1
+" let g:bufExplorerMaxHeight=30
+" let g:miniBufExplorerMoreThanOne=0
+" nmap <leader>bn :bn<cr>
+" nmap <leader>bp :bp<cr>
 
 Bundle 'a.vim'
 " a.vim setting
