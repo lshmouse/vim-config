@@ -138,6 +138,7 @@ set colorcolumn=+1
 set textwidth=100
 set foldenable
 set foldmethod=indent
+set paste
 
 filetype off
 filetype plugin indent on
