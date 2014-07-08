@@ -52,7 +52,7 @@ let g:nerdtreewinsize=25
 let g:nerdtreeshowlinenumbers=1
 let g:nerdtreequitonopen=1
 
-Bundle 'mru.vim'
+Bundle 'https://github.com/yegappan/mru'
 " mru.vim setting
 nmap  <F4> :MRU<cr>
 
