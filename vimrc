@@ -92,6 +92,10 @@ let g:snips_copyright="XiaoMi, Inc"
 
 Bundle 'SuperTab'
 
+Bundle 'https://github.com/scrooloose/nerdcommenter'
+let mapleader = "\" 
+let g:mapleader = "\" 
+
 " Bundle 'https://github.com/Shougo/neocomplete.vim'
 " g:neocomplete#enable_at_startup = 1
 " Bundle 'https://github.com/Valloric/YouCompleteMe' 
