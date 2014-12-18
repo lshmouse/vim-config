@@ -1,11 +1,14 @@
 " .vimrc for Liu Shaohui(lshmouse@gmail.com)
 " version 0.1
 " 1. using vundle to install plugins automatically
-" 2. common plugins: a.vim bufexplorer winmanager, lookupfile and so on
+" 2. common plugins: a.vim bufexplorer winmanager, lookupfile and so on 
+"
 " version 0.2
 " 1, support golang
+"
+" See: http://erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
+" See: http://tonybai.com/2014/11/07/golang-development-environment-for-vim/
 
-" see: http://erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
 " Setting up Vundle - the vim plugin bundler
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
@@ -17,7 +20,7 @@ if !filereadable(vundle_readme)
     let iCanHazVundle=0
 endif
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 Bundle 'gmarik/vundle'
 
 "Add your bundles here
@@ -28,10 +31,7 @@ color adrian
 
 Bundle 'ku-quickfix'
 Bundle 'genutils'
-Bundle 'The-NERD-Commenter'
-
-" Bundle 'winmanager'
-" using winmanager to manage windows
+" Bundle 'The-NERD-Commenter'
 
 Bundle 'taglist.vim'
 " taglist.vim
@@ -84,28 +84,44 @@ Bundle 'a.vim'
 " a.vim setting
 nmap  <F7> :A<cr>
 
-Bundle 'snipMate'
-" snipMate
-let g:snips_author="Liu Shaohui"
-let g:snips_email="lshmouse@gmail.com"
-let g:snips_copyright="XiaoMi, Inc"
-
 Bundle 'SuperTab'
 
-Bundle 'https://github.com/scrooloose/nerdcommenter'
-let mapleader = "\" 
-let g:mapleader = "\" 
-
-" Bundle 'https://github.com/Shougo/neocomplete.vim'
-" g:neocomplete#enable_at_startup = 1
-" Bundle 'https://github.com/Valloric/YouCompleteMe' 
-
 " vim for golang
-" Bundle 'https://github.com/fatih/vim-go'
-" Bundle 'https://github.com/tomasr/molokai'
-" Bundle 'https://github.com/Shougo/neosnippet.vim'
-" Bundle 'https://github.com/majutsushi/tagbar' 
-" Bundle 'https://github.com/fsouza/go.vim'
+Plugin 'fatih/vim-go'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+" vim-go custom mappings
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>e <Plug>(go-rename)
+
+" vim-go settings
+let g:go_fmt_command = "goimports"
+
+" YCM settings
+let g:ycm_key_list_select_completion = ['', '']
+let g:ycm_key_list_previous_completion = ['', '']
+let g:ycm_key_invoke_completion = '<C-Space>'
+
+" UltiSnips settings
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 
 "...All your other bundles...
 if iCanHazVundle == 0
@@ -115,7 +131,11 @@ if iCanHazVundle == 0
 endif
 " Setting up Vundle - the vim plugin bundler end
 
-" common config
+""""" common config 
+
+" set mapleader
+let mapleader = ","
+
 syntax on
 " encoding
 set encoding=UTF-8
@@ -142,7 +162,6 @@ set colorcolumn=+1
 set textwidth=100
 set foldenable
 set foldmethod=indent
-set paste
 
 filetype off
 filetype plugin indent on

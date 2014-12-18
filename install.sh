@@ -11,4 +11,5 @@ echo "Install vim config!"
 cp vimrc ~/.vimrc
 vim -c "q" ~/.vimrc
 
+cat _.snippets >> ~/.vim/bundle/vim-snippets/snippets/_.snippets
 echo "install finished, enjoy yourself!"
