@@ -20,13 +20,19 @@ if !filereadable(vundle_readme)
     let iCanHazVundle=0
 endif
 set rtp+=~/.vim/bundle/vundle/
+
 call vundle#begin()
 Bundle 'gmarik/vundle'
+
+" See: http://stackoverflow.com/questions/8804767/e185-cannot-find-color-scheme-solarized
+Bundle 'pathogen.vim'
+source ~/.vim/bundle/pathogen.vim/autoload/pathogen.vim
+call pathogen#infect()
 
 "Add your bundles here
 "Search in http://vim-scripts.org/vim/scripts.html
 "Or just add github project url
-Bundle 'https://github.com/rodnaph/vim-color-schemes' 
+Bundle 'rodnaph/vim-color-schemes'
 color adrian
 
 Bundle 'ku-quickfix'
